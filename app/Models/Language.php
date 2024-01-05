@@ -45,7 +45,7 @@ class Language extends Model
     /**
      * Get countries.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function countries(): BelongsToMany
     {
@@ -55,7 +55,7 @@ class Language extends Model
     /**
      * Get municipalities.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function municipalities(): BelongsToMany
     {

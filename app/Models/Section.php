@@ -45,7 +45,7 @@ class Section extends Model
     /**
      * Get district.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function district(): BelongsTo
     {

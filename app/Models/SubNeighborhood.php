@@ -45,7 +45,7 @@ class SubNeighborhood extends Model
     /**
      * Get neighborhood.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function neighborhood(): BelongsTo
     {

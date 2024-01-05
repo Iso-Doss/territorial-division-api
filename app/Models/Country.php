@@ -45,7 +45,7 @@ class Country extends Model
     /**
      * Get regions.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function regions(): BelongsToMany
     {
@@ -55,7 +55,7 @@ class Country extends Model
     /**
      * Get languages.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function languages(): BelongsToMany
     {
@@ -65,7 +65,7 @@ class Country extends Model
     /**
      * Get international organisations.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function internationalOrganisations(): BelongsToMany
     {

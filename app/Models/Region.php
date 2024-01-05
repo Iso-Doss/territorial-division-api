@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -46,7 +45,7 @@ class Region extends Model
     /**
      * Get countries.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function countries(): BelongsToMany
     {

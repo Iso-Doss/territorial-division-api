@@ -45,7 +45,7 @@ class Neighborhood extends Model
     /**
      * Get section.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function section(): BelongsTo
     {

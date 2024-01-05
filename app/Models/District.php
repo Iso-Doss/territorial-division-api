@@ -45,7 +45,7 @@ class District extends Model
     /**
      * Get municipality.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function municipality(): BelongsTo
     {

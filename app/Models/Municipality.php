@@ -45,7 +45,7 @@ class Municipality extends Model
     /**
      * Get province.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function province(): BelongsTo
     {

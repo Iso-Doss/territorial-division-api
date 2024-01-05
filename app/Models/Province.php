@@ -45,7 +45,7 @@ class Province extends Model
     /**
      * Get region.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function region(): BelongsTo
     {

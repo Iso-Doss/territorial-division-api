@@ -45,7 +45,7 @@ class InternationalOrganisation extends Model
     /**
      * Get countries.
      *
-     * @return BelongsToMany The belongs to many.
+     * @return BelongsToMany That belongs to many.
      */
     public function countries(): BelongsToMany
     {

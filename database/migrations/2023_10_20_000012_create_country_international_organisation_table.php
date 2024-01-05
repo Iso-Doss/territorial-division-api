@@ -15,7 +15,6 @@ return new class extends Migration {
             $table->foreignIdFor(Country::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->bigInteger('international_organisation_id')->unsigned();
             $table->foreign('international_organisation_id', 'country_international_organisation_id')->references('id')->on('international_organisations')->cascadeOnDelete()->cascadeOnUpdate();
-            //$table->foreignIdFor(InternationalOrganisation::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
             $table->primary(['country_id', 'international_organisation_id']);
         });

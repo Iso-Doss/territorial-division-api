@@ -75,7 +75,7 @@ class User extends Authenticatable
     /**
      * Get country.
      *
-     * @return BelongsTo The belongs to.
+     * @return BelongsTo That belongs to.
      */
     public function country(): BelongsTo
     {
