@@ -3,8 +3,8 @@
 /public/build
 /public/hot
 /public/storage
-/public/storage/
 /storage/*.key
+/storage/debugbar
 /vendor
 .env
 .env.backup
@@ -17,4 +17,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/storage/framework/sessions/
+composer.lock
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
+public/vendor/

@@ -1,0 +1,25 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "CFP Le Savoir-Faire : Centre de Formation Professionnelle",
+        "description": "API for CFP Le Savoir-Faire : Centre de Formation Professionnelle",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/user": {
+            "get": {
+                "summary": "Get current user",
+                "description": "Returns information about the current user if the request is authenticated",
+                "operationId": "ce7cb638a3852956f89d8121a9d11315",
+                "responses": {
+                    "200": {
+                        "description": "Everything OK"
+                    },
+                    "403": {
+                        "description": "Access Denied"
+                    }
+                }
+            }
+        }
+    }
+}

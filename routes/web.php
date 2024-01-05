@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// https://nouvelle-techno.fr/articles/laravel-creer-un-site-multilingue
+// Route qui permet de connaître la langue active
+Route::get('locale', [LocalizationController::class, 'getLang'])->name('get-lang');
+
+// Route qui permet de modifier la langue
+Route::get('locale/{lang}', [LocalizationController::class, 'setLang'])->name('set-lang');
+
+// Customer web routes
+require __DIR__ . '/web/customer.php';
+
+// Agent web routes
+require __DIR__ . '/web/contributor.php';
+
+// Administrator web routes
+require __DIR__ . '/web/administrator.php';

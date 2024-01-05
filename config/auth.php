@@ -40,6 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'customer' => [
+            'driver' => 'session',
+            'provider' => 'customers',
+        ],
+        'contributor' => [
+            'driver' => 'session',
+            'provider' => 'contributors',
+        ],
+        'administrator' => [
+            'driver' => 'session',
+            'provider' => 'administrators',
+        ],
     ],
 
     /*
@@ -61,6 +73,18 @@ return [
 
     'providers' => [
         'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+        'customers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+        'contributors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+        'administrators' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
@@ -93,6 +117,24 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'customers' => [
+            'provider' => 'customers',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'contributors' => [
+            'provider' => 'contributors',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'administrators' => [
+            'provider' => 'administrators',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
