@@ -15,7 +15,9 @@ return new class extends Migration {
         Schema::create('country_region', function (Blueprint $table) {
             $table->foreignIdFor(Country::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Region::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->timestamps();
+            $table->softDeletes();
             $table->primary(['country_id', 'region_id']);
         });
     }
@@ -25,6 +27,10 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('country_regions');
+        Schema::table('country_region', function (Blueprint $table) {
+            $table->dropForeignIdFor(Country::class);
+            $table->dropForeignIdFor(Region::class);
+        });
+        Schema::dropIfExists('country_region');
     }
 };

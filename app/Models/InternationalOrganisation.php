@@ -20,6 +20,9 @@ class InternationalOrganisation extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
         'activated_at',
     ];
 

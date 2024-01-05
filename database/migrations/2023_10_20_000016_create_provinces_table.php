@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->string('total_area')->nullable();
             $table->string('density')->nullable();
             $table->foreignIdFor(Region::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->timestamp('activated_at')->nullable();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -32,6 +32,9 @@ return new class extends Migration {
      */
     public function down(): void
     {
+        Schema::table('provinces', function (Blueprint $table) {
+            $table->dropForeignIdFor(Region::class);
+        });
         Schema::dropIfExists('provinces');
     }
 };

@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->text('data_before');
             $table->text('data_after');
             $table->text('status');
-            $table->timestamp('activated_at')->nullable();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -20,6 +20,11 @@ class Neighborhood extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'total_population',
+        'section_id',
         'activated_at',
     ];
 

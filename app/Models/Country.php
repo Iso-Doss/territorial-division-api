@@ -20,6 +20,29 @@ class Country extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'phone_code',
+        'description',
+        'devise',
+        'anthem_name', // Hymne national
+        'national_holiday_name',
+        'national_holiday_date',
+        'republic_president_name',
+        'republic_vice_president_name',
+        'parliament_name',
+        'official_language',
+        'political_capital_name',
+        'economic_capital_name',
+        'largest_city_name',
+        'total_area',
+        'water_area',
+        'time_zone',
+        'nationality',
+        'total_population',
+        'density',
+        'currency',
+        'internet_domain',
         'activated_at',
     ];
 

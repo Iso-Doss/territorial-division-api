@@ -14,12 +14,16 @@ class CountryInternationalOrganisation extends Model
 {
     use HasFactory, softDeletes;
 
+    protected $table = 'country_international_organisation';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'country_id',
+        'international_organisation_id',
         'activated_at',
     ];
 

@@ -14,12 +14,18 @@ class CountryRegion extends Model
 {
     use HasFactory, softDeletes;
 
+    protected $table = 'country_region';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'country_id',
         'activated_at',
     ];
 

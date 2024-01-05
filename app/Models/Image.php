@@ -19,6 +19,9 @@ class Image extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'type',
+        'entity',
+        'image',
         'activated_at',
     ];
 

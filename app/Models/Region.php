@@ -20,6 +20,10 @@ class Region extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'country_id',
         'activated_at',
     ];
 

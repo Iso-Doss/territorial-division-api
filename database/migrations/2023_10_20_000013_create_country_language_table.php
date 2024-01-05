@@ -15,6 +15,8 @@ return new class extends Migration {
         Schema::create('country_language', function (Blueprint $table) {
             $table->foreignIdFor(Country::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Language::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
+            $table->softDeletes();
             $table->timestamps();
             $table->primary(['country_id', 'language_id']);
         });
@@ -25,6 +27,10 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('country_languages');
+        Schema::table('country_language', function (Blueprint $table) {
+            $table->dropForeignIdFor(Country::class);
+            $table->dropForeignIdFor(Language::class);
+        });
+        Schema::dropIfExists('country_language');
     }
 };

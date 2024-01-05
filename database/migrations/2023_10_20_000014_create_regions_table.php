@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('code');
             $table->string('description')->nullable();
             $table->foreignIdFor(Country::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->timestamp('activated_at')->nullable();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -28,6 +28,9 @@ return new class extends Migration {
      */
     public function down(): void
     {
+        Schema::table('regions', function (Blueprint $table) {
+            $table->dropForeignIdFor(Country::class);
+        });
         Schema::dropIfExists('regions');
     }
 };

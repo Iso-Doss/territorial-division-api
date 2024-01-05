@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->string('type');
             $table->string('token');
             $table->primary(['email', 'profile', 'type']);
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });

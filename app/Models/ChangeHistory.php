@@ -19,6 +19,11 @@ class ChangeHistory extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'entity',
+        'type',
+        'data_before',
+        'data_after',
+        'status',
         'activated_at',
     ];
 
@@ -35,6 +40,9 @@ class ChangeHistory extends Model
      * @var array<string, string>
      */
     protected $casts = [
+        'id' => 'string',
+        'data_before' => 'array',
+        'data_after' => 'array',
         'activated_at' => 'datetime',
         'deleted_at' => 'datetime',
         'created_at' => 'datetime',

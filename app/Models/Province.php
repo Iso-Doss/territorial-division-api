@@ -20,6 +20,14 @@ class Province extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'prefecture_name',
+        'total_population',
+        'total_area',
+        'density',
+        'region_id',
         'activated_at',
     ];
 

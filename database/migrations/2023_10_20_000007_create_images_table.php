@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('type');
             $table->morphs('entity');
             $table->text('image');
-            $table->timestamp('activated_at')->nullable();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });

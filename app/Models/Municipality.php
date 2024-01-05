@@ -20,6 +20,14 @@ class Municipality extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'mayor_name',
+        'mayor_mandate_year',
+        'total_population',
+        'density',
+        'province_id',
         'activated_at',
     ];
 

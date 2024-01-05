@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('description')->nullable();
             $table->string('total_population')->nullable();
             $table->foreignIdFor(Section::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->timestamp('activated_at')->nullable();
+            $table->timestamp('activated_at')->nullable()->useCurrent();
             $table->softDeletes();
             $table->timestamps();
         });
@@ -29,6 +29,9 @@ return new class extends Migration {
      */
     public function down(): void
     {
+        Schema::table('neighborhoods', function (Blueprint $table) {
+            $table->dropForeignIdFor(Section::class);
+        });
         Schema::dropIfExists('neighborhoods');
     }
 };

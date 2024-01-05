@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('phone_code')->unique();
             $table->string('description')->nullable();
             $table->string('devise')->nullable();
-            $table->string('hymme_name')->nullable();
+            $table->string('anthem_name')->nullable(); // Hymne national
             $table->string('national_holiday_name')->nullable();
             $table->date('national_holiday_date')->nullable();
             $table->string('republic_president_name')->nullable();

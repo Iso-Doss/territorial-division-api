@@ -14,12 +14,16 @@ class CountryLanguage extends Model
 {
     use HasFactory, softDeletes;
 
+    protected $table = 'country_language';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'country_id',
+        'language_id',
         'activated_at',
     ];
 

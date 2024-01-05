@@ -20,6 +20,11 @@ class Section extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'total_population',
+        'district_id',
         'activated_at',
     ];
 

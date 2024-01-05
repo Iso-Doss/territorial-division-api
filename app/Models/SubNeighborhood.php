@@ -20,6 +20,11 @@ class SubNeighborhood extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'total_population',
+        'neighborhood_id',
         'activated_at',
     ];
 

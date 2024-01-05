@@ -33,14 +33,17 @@ class User extends Authenticatable
         'user_name',
         'registration_number',
         'phone_number',
+        'whatsapp_phone_number',
         'ifu',
         'avatar',
         'gender',
         'birthday',
+        'birthplace',
         'city',
         'address',
         'website',
         'has_default_password',
+        'country_id',
         'activated_at',
         'verified_at',
         'email_verified_at',
@@ -63,6 +66,7 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'birthday' => 'date',
         'activated_at' => 'datetime',
         'verified_at' => 'datetime',
         'email_verified_at' => 'datetime',
